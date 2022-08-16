@@ -1,7 +1,15 @@
+import { useParams } from "react-router-dom"
+import { getHeroById } from "../helpers";
+
 export const Hero = () => {
-return (
-  <>
-    <h1>Hero Page</h1>
-  </>
-)
+  const { id } = useParams();
+
+  const hero = getHeroById(id);
+  console.log(hero);
+
+  return (
+    <>
+      <h1>Hero Page</h1>
+    </>
+  )
 }
